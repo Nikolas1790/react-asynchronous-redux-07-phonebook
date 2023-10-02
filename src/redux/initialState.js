@@ -8,8 +8,7 @@ export const initialState = {
     filter: ''
 }
 
-
-// {
+// export const initialState = {
 //     contacts: {
 //       items: [],
 //       isLoading: false,
