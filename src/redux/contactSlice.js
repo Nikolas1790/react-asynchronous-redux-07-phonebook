@@ -51,11 +51,15 @@ export const contactList = createSlice({
             state.isLoading = false;
             state.error = action.payload;
           },
+
+          filterContact(state, action) {
+            state.filter = action.payload;
+        }
       },
     
 })
 
-export const { addTask, deleteTask, filterContact} = contactList.actions;
+export const { filterContact} = contactList.actions;
  
 
 // import { createSlice } from "@reduxjs/toolkit";
@@ -84,9 +88,9 @@ export const { addTask, deleteTask, filterContact} = contactList.actions;
 //             const index = state.items.findIndex(task => task.id === action.payload);
 //             state.items.splice(index, 1);
 //         },
-//         filterContact(state, action) {
-//             state.filter = action.payload;
-//         }
+        // filterContact(state, action) {
+        //     state.filter = action.payload;
+        // }
 //     }
 // })
 
