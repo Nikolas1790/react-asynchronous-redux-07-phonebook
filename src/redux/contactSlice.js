@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialState } from "./initialState";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import { addContact, deleteContact, fetchContacts } from "./operations";
 
 export const contactList = createSlice({
@@ -52,14 +52,10 @@ export const contactList = createSlice({
             state.error = action.payload;
           },
 
-        //   filterContact(state, action) {
-        //     state.filter = action.payload;
-        // }
       },
     
 })
 
-// export const { filterContact} = contactList.actions;
  
 
 // import { createSlice } from "@reduxjs/toolkit";

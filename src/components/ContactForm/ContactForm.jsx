@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getItems} from "redux/selectors";
 import { addTask } from "redux/contactSlice";
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 import { ButtonAddContact, FormTable, InputInfToAdd, Label } from "components/App.styled";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from "react-toastify"; 
