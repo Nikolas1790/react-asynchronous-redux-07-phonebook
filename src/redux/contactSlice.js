@@ -52,14 +52,14 @@ export const contactList = createSlice({
             state.error = action.payload;
           },
 
-          filterContact(state, action) {
-            state.filter = action.payload;
-        }
+        //   filterContact(state, action) {
+        //     state.filter = action.payload;
+        // }
       },
     
 })
 
-export const { filterContact} = contactList.actions;
+// export const { filterContact} = contactList.actions;
  
 
 // import { createSlice } from "@reduxjs/toolkit";

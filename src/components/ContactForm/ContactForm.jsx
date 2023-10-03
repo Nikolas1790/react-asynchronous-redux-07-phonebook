@@ -33,7 +33,7 @@ export const ContactForm = () => {
 
   const handleAddContact = e => {
     e.preventDefault();
-    const id = nanoid();
+    // const id = nanoid();
     const returnContact = itemValue.find(contact => contact.name.toLowerCase().includes(name.toLowerCase()) );
 
     if(returnContact){
