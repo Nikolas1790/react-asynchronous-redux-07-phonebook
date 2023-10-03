@@ -3,42 +3,38 @@ import { initialState } from "./initialState";
 // import { nanoid } from "nanoid";
 import { addContact, deleteContact, fetchContacts } from "./operations";
 
+const handlePending = state => {
+  state.isLoading = true;
+};
+const handleRejected = (state, action) => {
+  state.isLoading = false;
+  state.error = action.payload;
+};
+
 export const contactList = createSlice({
     name: 'contacts',
     initialState,
     extraReducers: {
-        [fetchContacts.pending](state) {
-          state.isLoading = true;
-        },
+        [fetchContacts.pending]:handlePending,
         [fetchContacts.fulfilled](state, action) {
           state.isLoading = false;
           state.error = null;
           state.items = action.payload;
         },
-        [fetchContacts.rejected](state, action) {
-          state.isLoading = false;
-          state.error = action.payload;
-        },
+        [fetchContacts.rejected]: handleRejected,
 
 
-        [addContact.pending](state) {
-            state.isLoading = true;
-          },
+        [addContact.pending]: handlePending,
           [addContact.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
             state.items.push(action.payload);
           },
-          [addContact.rejected](state, action) {
-            state.isLoading = false;
-            state.error = action.payload;
-          },
+          [addContact.rejected]: handleRejected,
 
 
 
-          [deleteContact.pending](state) {
-            state.isLoading = true;
-          },
+          [deleteContact.pending]: handlePending,
           [deleteContact.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
@@ -47,10 +43,7 @@ export const contactList = createSlice({
             );
             state.items.splice(index, 1);
           },
-          [deleteContact.rejected](state, action) {
-            state.isLoading = false;
-            state.error = action.payload;
-          },
+          [deleteContact.rejected]: handleRejected,
 
       },
     

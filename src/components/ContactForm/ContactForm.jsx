@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { getItems} from "redux/selectors";
+import { selectItems} from "redux/selectors";
 import { addTask } from "redux/contactSlice";
 // import { nanoid } from 'nanoid'
 import { ButtonAddContact, FormTable, InputInfToAdd, Label } from "components/App.styled";
@@ -14,7 +14,7 @@ export const ContactForm = () => {
   const [number, setNumber] = useState('')
 
   const dispatch = useDispatch()
-  const itemValue = useSelector(getItems)
+  const itemValue = useSelector(selectItems)
 
  const handleImputChange = e => {
     const {name, value} = e.target;    

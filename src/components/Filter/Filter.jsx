@@ -1,13 +1,13 @@
 import { FindContact } from "components/App.styled"
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContact } from "redux/filterSlice";
-import { getFilter } from "redux/selectors";
+import { selectFilter } from "redux/selectors";
 import { InputFindContact } from "./Filter.style";
 // import { useState } from "react";
 
 export const Filter =() => {
     const dispatch = useDispatch();
-    const filterValue  = useSelector(getFilter);
+    const filterValue  = useSelector(selectFilter);
     // const [inputValue, setInputValue] = useState(filterValue);
 
     const handleImputFilter = e => {
