@@ -16,10 +16,10 @@ export const contactList = createSlice({
     initialState,
     extraReducers: {
         [fetchContacts.pending]:handlePending,
-        [fetchContacts.fulfilled](state, action) {
+        [fetchContacts.fulfilled](state, {payload}) {
           state.isLoading = false;
           state.error = null;
-          state.items = action.payload;
+          state.items = payload;
         },
         [fetchContacts.rejected]: handleRejected,
 
