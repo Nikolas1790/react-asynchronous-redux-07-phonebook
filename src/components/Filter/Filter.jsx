@@ -3,19 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { filterContact } from "redux/filterSlice";
 import { selectFilter } from "redux/selectors";
 import { InputFindContact } from "./Filter.style";
-// import { useState } from "react";
 
 export const Filter =() => {
     const dispatch = useDispatch();
     const filterValue  = useSelector(selectFilter);
-    // const [inputValue, setInputValue] = useState(filterValue);
 
     const handleImputFilter = e => {
-        // setInputValue(e.currentTarget.value);
         dispatch(filterContact(e.currentTarget.value));       
     };
 
-        return(
+    return(
         <div>
              <FindContact>Find contacts by name</FindContact>
              <InputFindContact type="text"
@@ -24,7 +21,6 @@ export const Filter =() => {
                   onChange={handleImputFilter}
                   value={filterValue}
                   pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"/>
-
         </div>
     )
 }
