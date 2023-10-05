@@ -63,8 +63,9 @@ export const ContactForm = () => {
                     />
             </Label>         
   
-            <Label htmlFor="">Number
-                   <InputInfToAdd
+            <Label htmlFor="">
+                  Number
+                  <InputInfToAdd
                         type="tel"
                         name="number"
                         placeholder="Enter your phone number..."
@@ -74,9 +75,9 @@ export const ContactForm = () => {
                         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                       required
                                          />
-             </Label>
+            </Label>
    
-                <ButtonAddContact type="submit" >Add contact</ButtonAddContact>
+                <ButtonAddContact type="submit">Add contact</ButtonAddContact>
                 </FormTable>
                 <ToastContainer autoClose={1500}/>
             </div>
