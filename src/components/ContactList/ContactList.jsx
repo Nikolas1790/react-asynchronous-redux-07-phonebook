@@ -2,7 +2,7 @@ import { ButtonDel, ItemContact, ItemsContracts } from "components/App.styled"
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from "redux/operations";
-import { selectItems, selectFilter, selectIsLoading, selectError, selectVisibleContacts } from "redux/selectors";
+import { selectIsLoading, selectError, selectVisibleContacts } from "redux/selectors";
 import {  toast } from "react-toastify"; 
 
 export const ContactList =() => {
