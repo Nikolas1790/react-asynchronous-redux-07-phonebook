@@ -14,6 +14,8 @@ export const contactList = createSlice({
         },
         [fetchContacts.rejected]: handleRejected,
 
+
+
         [addContact.pending]: handlePending,
           [addContact.fulfilled](state, {payload}) {
             handleFulfilledErrorLoading(state);
@@ -21,6 +23,8 @@ export const contactList = createSlice({
           },
           [addContact.rejected]: handleRejected,
 
+
+          
           [deleteContact.pending]: handlePending,
           [deleteContact.fulfilled](state, action) {
             handleFulfilledErrorLoading(state);
