@@ -7,8 +7,7 @@ export const filterList = createSlice({
         filterContact(_, {payload}) {
             return payload;
         }
-      },
-    
+      },    
 })
 
 export const { filterContact} = filterList.actions;

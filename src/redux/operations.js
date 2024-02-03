@@ -11,9 +11,7 @@ export const fetchContacts = createAsyncThunk("contacts/fetchAll",
       } catch (e) {
         return thunkAPI.rejectWithValue(e.message);
       }
-
 });
-
 
 export const addContact = createAsyncThunk("contacts/addContact",
     async (text, thunkAPI) => {
@@ -24,10 +22,9 @@ export const addContact = createAsyncThunk("contacts/addContact",
         return thunkAPI.rejectWithValue(e.message);
       }
     }
-  );
+);
 
-
-  export const deleteContact = createAsyncThunk(
+export const deleteContact = createAsyncThunk(
     "contacts/deleteContact",
     async (taskId, thunkAPI) => {
       try {
@@ -37,4 +34,4 @@ export const addContact = createAsyncThunk("contacts/addContact",
         return thunkAPI.rejectWithValue(e.message);
       }
     }
-  );
+);

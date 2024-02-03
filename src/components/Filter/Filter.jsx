@@ -14,13 +14,13 @@ export const Filter =() => {
 
     return(
         <div>
-             <FindContact>Find contacts by name</FindContact>
-             <InputFindContact type="text"
-                  name="filter"
-                  placeholder="Enter your contact..."
-                  onChange={handleImputFilter}
-                  value={filterValue}
-                  pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"/>
+            <FindContact>Find contacts by name</FindContact>
+            <InputFindContact type="text"
+                name="filter"
+                placeholder="Enter your contact..."
+                onChange={handleImputFilter}
+                value={filterValue}
+                pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"/>
         </div>
     )
 }
